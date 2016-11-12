@@ -31,7 +31,7 @@ class ActiveRecordModel
 	 * 使用原始的预编译查询
 	 * 例如
 	 * 	$query 		= "select * from userinfo where nickname = ? or nickname = ?";
-		$bindParams = ['jokechat','坏孩子'];
+	 *	$bindParams = ['jokechat','坏孩子'];
 	 * @param string $query
 	 * @param array $bindParams
 	 * @return
@@ -199,8 +199,8 @@ class ActiveRecordModel
 	 * join 查询
 	 * 例如
 	 * $result 	= $arModel->join('userinfo uinfo', "uinfo.userid=umoney.userid","LEFT")
-							  ->where('umoney.userid','11467#luhwcv')
-							  ->get('user_money_total umoney',null,"uinfo.nickname,uinfo.userid,umoney.*");
+	 *					  ->where('umoney.userid','11467#luhwcv')
+	 *						  ->get('user_money_total umoney',null,"uinfo.nickname,uinfo.userid,umoney.*");
 	 * @param string $joinTable
 	 * @param string $joinCondition
 	 * @param string $joinType
