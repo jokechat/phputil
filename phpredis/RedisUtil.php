@@ -23,7 +23,10 @@ class RedisUtil
 
 	public function __construct()
 	{
-		$this->redis = new Redis();
+		if ($this->redis == null ) {
+			$this->redis = new Redis();
+		}
+		
 		try {
 			$this->redis->connect(self::$host,self::$port);
 			$this->redis->auth(self::$passwd);
