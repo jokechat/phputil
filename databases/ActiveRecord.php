@@ -10,6 +10,8 @@
  */
 class ActiveRecordModel
 {
+
+	protected $db = null;
 	/**
 	 * 实例化数据库连接
 	 */
