@@ -695,7 +695,7 @@ class MysqliDb2
         $this->_stmtErrno = $stmt->errno;
         $this->count = $stmt->affected_rows;
 
-        return $status;
+        return $this->count;
     }
 
     /**
